@@ -12,15 +12,15 @@ def index(request):
     return render(request, 'gallery/index.html', context)
 
 
-# def search_results(request):
-#     if 'location' in request.GET and request.GET["location"]:
-#         search_term = request.GET.get("location")
-#         searched_images = Image.search_by_category(search_term)
-#         message = f"{search_term}"
-#         return render(request, 'gallery/search.html', {"message": message, "locations": searched_images})
-#     else:
-#         message = "You haven't searched for any term"
-#         return render(request, 'gallery/search.html', {"message": message})
+def search_results(request):
+    if 'location' in request.GET and request.GET["location"]:
+        search_term = request.GET.get("location")
+        searched_images = Image.search_by_category(search_term)
+        message = f"{search_term}"
+        return render(request, 'gallery/search.html', {"message": message, "locations": searched_images})
+    else:
+        message = "You haven't searched for any term"
+        return render(request, 'gallery/search.html', {"message": message})
 
 
 # def area_results(request, id):
