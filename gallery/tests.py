@@ -53,18 +53,18 @@ class ImageTestClass(TestCase):
     def test_instance(self):
         self.assertTrue(isinstance(self.image, Image))
 
-#     # Testing Save Method
-#     def test_save_method(self):
-#         self.image.save_image()
-#         images = Image.objects.all()
-#         self.assertTrue(len(images) > 0)
+    # Testing Save Method
+    def test_save_method(self):
+        self.image.save_image()
+        images = Image.objects.all()
+        self.assertTrue(len(images) > 0)
 
-#     def tearDown(self):
-#         Image.objects.all().delete()
-# # Added tes for category and location
-#     def test_filter_by_location(self):
-#         self.location = Image.filter_by_location("1")
+    def tearDown(self):
+        Image.objects.all().delete()
+# Added tes for category and location
+    def test_filter_by_location(self):
+        self.location = Image.filter_by_location("1")
 
-#     def test_search_by_category(self):
-#         self.category = Image.search_by_category("Modern food")
+    def test_search_by_category(self):
+        self.category = Image.search_by_category("Modern food")
 
