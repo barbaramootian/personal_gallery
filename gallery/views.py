@@ -23,9 +23,9 @@ def search_results(request):
         return render(request, 'gallery/search.html', {"message": message})
 
 
-# def area_results(request, id):
-#     area = Image.filter_by_location(id)
-#     all_image = Image.objects.all()
-#     all_location = Location.objects.all()
-#     context = {'all_image': all_image, 'all_location': all_location, "image": area}
-#     return render(request, "gallery/location.html", context)
+def area_results(request, id):
+    area = Image.filter_by_location(id)
+    all_image = Image.objects.all()
+    all_location = Location.objects.all()
+    context = {'all_image': all_image, 'all_location': all_location, "image": area}
+    return render(request, "gallery/location.html", context)
