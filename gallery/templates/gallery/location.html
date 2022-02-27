@@ -1,5 +1,4 @@
 
-&lt;!&ndash;Added a bootstrap static modal,its position and display have been overridden&ndash;&gt;-->
 {% extends 'base.html' %}
 {% block content %}
 <div class="container-fluid" >
@@ -23,7 +22,7 @@
                &lt;!&ndash;Added buttons for coping image urls and closing the modal&ndash;&gt;
                <div class="modal-footer">
                <input type="submit" onClick="Link(this.id)" id="{{image.image.url}}" class="btn btn-success" value="Copy">
-               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+               <button type="button" class="btn btn-info" data-bs-dismiss="modal">Close</button>
                </div>
            </div>
            </div>
