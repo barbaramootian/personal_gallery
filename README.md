@@ -2,7 +2,7 @@
 # Author
 Barbara Reson Mootian
 ## Description
-the application is about personal galery that display photo ,taken in different location and category.
+The application is about personal gallery that display photo ,taken in different location and category.
 
 ## User Stories
 * User can see view different photo that interest him.
