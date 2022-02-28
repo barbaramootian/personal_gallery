@@ -1,12 +1,12 @@
 
 {% extends 'base.html' %}
 {% block content %}
-<div class="container-fluid" >
+<div class="container-fluid mt-2">
        {% for image in all_image %}
-       <a href=""data-bs-target='#data{{image.id}}' data-bs-toggle="modal">
-        <img style = "width:25%; height:25%;" src="{{image.image.url}}" alt="Image">
+       <a href=""data-bs-target='#data{{image.id}}' class ="mt-4" data-bs-toggle="modal">
+        <img style = "width:32%; height:32%;" src="{{image.image.url}}" alt="Image">
        </a>
-       <div class="modal fade" id="data{{image.id}}" tabindex="-1">
+       <div class="modal fade"id="data{{image.id}}" tabindex="-1">
            <div class="modal-dialog">
            <div class="modal-content">
                <div class="modal-header">
@@ -19,7 +19,6 @@
                                <h3>Location:{{image.location}}</h3>
                                <p>Description:{{image.description}}</p>
                </div>
-               &lt;!&ndash;Added buttons for coping image urls and closing the modal&ndash;&gt;
                <div class="modal-footer">
                 <input type="submit" onClick="Link(this.id)" id="{{image.image.url}}" class="btn btn-success" value="Copy">
                <button type="button" class="btn btn-info" data-bs-dismiss="modal">Close</button>
