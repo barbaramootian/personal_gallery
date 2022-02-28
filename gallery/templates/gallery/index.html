@@ -1,10 +1,10 @@
 
 {% extends 'base.html' %}
 {% block content %}
-<div class="container-fluid mt-2">
+<div class="container-fluid">
        {% for image in all_image %}
-       <a href=""data-bs-target='#data{{image.id}}' class ="mt-4" data-bs-toggle="modal">
-        <img style = "width:32%; height:32%;" src="{{image.image.url}}" alt="Image">
+       <a href=""data-bs-target='#data{{image.id}}'  data-bs-toggle="modal">
+        <img class="m-2"style = "width:32%; height:32%;" src="{{image.image.url}}" alt="Image">
        </a>
        <div class="modal fade"id="data{{image.id}}" tabindex="-1">
            <div class="modal-dialog">
