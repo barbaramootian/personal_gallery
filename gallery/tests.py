@@ -61,7 +61,7 @@ class ImageTestClass(TestCase):
 
     def tearDown(self):
         Image.objects.all().delete()
-# Added tes for category and location
+# Added test for category and location
     def test_filter_by_location(self):
         self.location = Image.filter_by_location("1")
 
